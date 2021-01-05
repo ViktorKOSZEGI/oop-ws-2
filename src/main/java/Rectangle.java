@@ -1,40 +1,45 @@
 public class Rectangle {
-    private int height;
-    private int width;
+    private final int HEIGHT;
+    private final int WIDTH;
     private int size;
 
     public Rectangle(int height, int width) {
-        this.height = height;
-        this.width = width;
+        this.HEIGHT = height;
+        this.WIDTH = width;
     }
 
     public Rectangle(int height, int width, int size) {
-        this.height = height;
-        this.width = width;
+        this.HEIGHT = height;
+        this.WIDTH = width;
         this.size = size;
     }
 
-    public int getHeight() {
-        return height;
+    public int getHEIGHT() {
+        return HEIGHT;
     }
 
-    public void setHeight(int height) {
-        this.height = height;
-    }
-
-    public int getWidth() {
-        return width;
-    }
-
-    public void setWidth(int width) {
-        this.width = width;
+    public int getWIDTH() {
+        return WIDTH;
     }
 
     public int getSize() {
         return size;
     }
 
-    public void setSize(int size) {
-        this.size = size;
+    public double calculateArea() {
+        return HEIGHT * WIDTH;
+    }
+
+    @Override
+    public String toString() {
+        return "Rectangle{" +
+                "HEIGHT=" + HEIGHT +
+                ", WIDTH=" + WIDTH +
+                ", size=" + size +
+                '}';
+    }
+
+    public void printRectangle() {
+        System.out.println(this.toString());
     }
 }
